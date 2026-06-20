@@ -5,7 +5,7 @@ PromptWars (H2S) — Challenge 3 submission.
 
 Live demo
 
-Visit:
+Visit:file:///C:/Users/This%20Pc/Documents/Codex/2026-06-20/https-legendary-frangipane-621805-netlify-app/index.html
 
 Chosen Vertical
 
