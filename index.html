@@ -1,0 +1,169 @@
+          <button class="calc-btn" id="calcBtn">Calculate my footprint</button>
+        </section>
+
+        <div>
+          <section class="panel" aria-labelledby="result-head">
+            <div class="panel-head">
+              <h3 id="result-head">Your footprint</h3>
+              <span class="panel-num">02 / READING</span>
+            </div>
+
+            <div class="result-top">
+              <div class="footprint-fig" aria-hidden="true">
+                <svg viewBox="0 0 100 160" role="img">
+                  <defs>
+                    <path id="solePath" d="M62 58 C78 62 82 75 80 95 C78 115 70 128 68 138 C66 148 58 156 50 158 C42 156 34 148 32 138 C30 128 22 115 20 95 C18 75 22 62 38 58 C44 54 56 54 62 58 Z"/>
+                    <clipPath id="footClip">
+                      <use href="#solePath"/>
+                      <circle cx="27" cy="50" r="18"/>
+                      <circle cx="41" cy="38" r="16"/>
+                      <circle cx="56" cy="33" r="15"/>
+                      <circle cx="70" cy="38" r="14"/>
+                      <circle cx="81" cy="48" r="12"/>
+                    </clipPath>
+                  </defs>
+                  <g clip-path="url(#footClip)">
+                    <rect x="0" y="0" width="100" height="160" fill="#3C5746"/>
+                    <rect id="bandDiet" class="strata-band" x="0" width="100" fill="var(--sage)" y="160" height="0"/>
+                    <rect id="bandEnergy" class="strata-band" x="0" width="100" fill="var(--amber)" y="160" height="0"/>
+                    <rect id="bandTravel" class="strata-band" x="0" width="100" fill="var(--clay)" y="160" height="0"/>
+                    <rect id="bandWaste" class="strata-band" x="0" width="100" fill="var(--sky)" y="160" height="0"/>
+                  </g>
+                  <use href="#solePath" fill="none" stroke="var(--line-strong)" stroke-width="1.3"/>
+                  <circle cx="27" cy="50" r="18" fill="none" stroke="var(--line-strong)" stroke-width="1.3"/>
+                  <circle cx="41" cy="38" r="16" fill="none" stroke="var(--line-strong)" stroke-width="1.3"/>
+                  <circle cx="56" cy="33" r="15" fill="none" stroke="var(--line-strong)" stroke-width="1.3"/>
+                  <circle cx="70" cy="38" r="14" fill="none" stroke="var(--line-strong)" stroke-width="1.3"/>
+                  <circle cx="81" cy="48" r="12" fill="none" stroke="var(--line-strong)" stroke-width="1.3"/>
+                  <line id="targetLine" class="target-line" x1="-6" x2="106" y1="100" y2="100"/>
+                </svg>
+              </div>
+
+              <div class="total-figure">
+                <div class="label">Estimated monthly footprint</div>
+                <div class="num" id="totalNum" aria-live="polite">- <span>kg CO2e</span></div>
+                <div class="vs-target" id="vsTarget"></div>
+                <div class="legend" id="legend"></div>
+              </div>
+            </div>
+          </section>
+
+          <section class="panel" aria-labelledby="insight-head">
+            <div class="panel-head">
+              <h3 id="insight-head">One thing to try</h3>
+              <span class="panel-num">03 / ACTION</span>
+            </div>
+            <div id="insightBox">
+              <p class="empty-note">Calculate your footprint to get a move sized to your own numbers - not a generic tip.</p>
+            </div>
+          </section>
+        </div>
+      </div>
+
+      <section class="panel" id="trendPanel" aria-labelledby="trend-head">
+        <div class="panel-head">
+          <h3 id="trend-head">This session's log</h3>
+          <span class="panel-num">04 / TREND</span>
+        </div>
+        <div id="logList"></div>
+      </section>
+    </section>
+
+    <section class="wrap section" id="how">
+      <div class="section-head compact">
+        <span class="section-kicker">How it works</span>
+        <h2>From everyday choices to a clear signal</h2>
+      </div>
+      <div class="process-grid">
+        <article>
+          <span>1</span>
+          <h3>Enter the month</h3>
+          <p>Add travel, electricity, cooking fuel, diet pattern, and waste. The defaults give you a useful starting point.</p>
+        </article>
+        <article>
+          <span>2</span>
+          <h3>Read the split</h3>
+          <p>The visual footprint and legend show which category is carrying the most emissions.</p>
+        </article>
+        <article>
+          <span>3</span>
+          <h3>Choose one move</h3>
+          <p>The recommendation sizes an action from your own inputs, so the next step is practical rather than abstract.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="action-band" id="actions">
+      <div class="wrap">
+        <div class="section-head compact">
+          <span class="section-kicker">Action library</span>
+          <h2>Small moves with measurable direction</h2>
+        </div>
+        <div class="action-grid">
+          <article>
+            <span class="swatch clay"></span>
+            <h3>Rethink routine trips</h3>
+            <p>Shift one recurring car trip to public transport, rail, walking, cycling, or a shared ride.</p>
+          </article>
+          <article>
+            <span class="swatch amber"></span>
+            <h3>Lower energy demand</h3>
+            <p>Target cooling, lighting, idle devices, and appliance use before buying offsets or gadgets.</p>
+          </article>
+          <article>
+            <span class="swatch sage"></span>
+            <h3>Change the default plate</h3>
+            <p>Try a mostly plant-based weekday pattern instead of treating every meal as a separate decision.</p>
+          </article>
+          <article>
+            <span class="swatch sky"></span>
+            <h3>Cut disposal weight</h3>
+            <p>Reduce packaging, compost food scraps where possible, and recycle materials accepted locally.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="wrap section method-layout" id="method">
+      <div class="section-head compact">
+        <span class="section-kicker">Method</span>
+        <h2>Transparent assumptions, not a black box</h2>
+        <p>Groundwork uses simplified emission factors to build intuition. It is meant for awareness and planning, not certified reporting.</p>
+      </div>
+      <div class="method-card">
+        <details open>
+          <summary>Calculation assumptions</summary>
+          <ul>
+            <li>Travel: 0.192 kg/km petrol car, 0.171 diesel, 0.103 two-wheeler, 0.105 bus, 0.041 metro/train, around 500 kg per domestic round-trip flight.</li>
+            <li>Energy: 0.82 kg/kWh for India grid average or 0.475 kg/kWh for global average; around 42 kg CO2e per 14.2 kg LPG cylinder.</li>
+            <li>Diet: around 3.3 kg/day meat-heavy, 2.5 mixed, 1.7 vegetarian, 1.5 vegan, applied across 30 days.</li>
+            <li>Waste: around 0.5 kg CO2e per kg landfilled per week, reduced 40% if composted or recycled.</li>
+            <li>The 190 kg/month benchmark is a rough monthly slice of a 2.3 t CO2e/year per-person budget.</li>
+          </ul>
+        </details>
+        <p class="privacy-note">Nothing you enter is sent anywhere. The calculator runs in your browser, and the session log clears on refresh.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-grid">
+      <div>
+        <a class="brand" href="#top" aria-label="Groundwork home">
+          <span class="brand-mark"></span>
+          <span>Groundwork</span>
+        </a>
+        <p>Carbon awareness for ordinary decisions, built as a simple static website.</p>
+      </div>
+      <nav aria-label="Footer navigation">
+        <a href="#calculator">Calculator</a>
+        <a href="#how">How it works</a>
+        <a href="#actions">Actions</a>
+        <a href="#method">Method</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
